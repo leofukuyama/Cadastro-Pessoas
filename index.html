@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pessoas</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>CADASTRO DE PESSOAS</h1>
+    </header>
+
+    <main>
+        <div class="titulo">
+            <h2>LISTA DE PESSOAS</h2>
+            <span>PESSOAS</span>
+        </div>
+
+        <div class="campo">
+            <div class="flex-container">
+                <div class="inputLine flex-child">
+                    <label for="nomePessoa">NOME DA PESSOA</label>
+                    <input type="text" id="nomePessoa" placeholder="NOME DA PESSOA">
+                </div>
+                <div class="inputLine flex-child">
+                    <label for="idadePessoa">DATA DE NASCIMENTO</label>
+                    <input type="text" id="idadePessoa" placeholder="DD / MM / AAAA">
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="inputLine flex-child">
+                    <label for="emailPessoa">E-MAIL</label>
+                    <input type="text" id="emailPessoa" placeholder="E-MAIL DA PESSOA">
+                </div>
+                <div class="inputLine flex-child">
+                    <label for="cpfPessoa">CPF DA PESSOA</label>
+                    <input type="text" id="cpfPessoa" placeholder="CPF DA PESSOA">
+                </div>
+            </div>
+
+            <button id="addPessoa" onclick="pessoa.cadastrar()">CADASTRAR</button>
+            <button onclick="pessoa.cancelar()">CANCELAR</button>
+        </div>
+
+        <div class="tabela">
+            <table border="1">
+                <thead>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>DATA DE NASCIMENTO</th>
+                    <th>E-MAIL</th>
+                    <th>CPF</th>
+                    <th>AÇÕES</th>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+
+    </main>
+</body>
+</html>
